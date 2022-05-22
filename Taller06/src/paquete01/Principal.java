@@ -1,6 +1,7 @@
 
 package paquete01;
 
+import java.util.Locale;
 import paquete02.*;
 import java.util.Scanner;
 
@@ -8,6 +9,7 @@ public class Principal {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        sc.useLocale(Locale.US);
         String nombre, nombreHospital, provincia, ciudad, especialidad, tipo, direccion;
         double sueldo;
         int especialidades;
