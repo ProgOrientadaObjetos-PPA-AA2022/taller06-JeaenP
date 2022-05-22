@@ -29,7 +29,7 @@ public class Enfermero {
         return nombre;
     }
     
-    public String obtenerEspecialidad() {
+    public String obtenerTipo() {
         return tipo;
     }
     

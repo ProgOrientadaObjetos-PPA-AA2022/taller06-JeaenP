@@ -77,7 +77,34 @@ public class Hospital {
     }
     
     public String toString() {
-        String cadena = String.format("");
+        String cadena = String.format("%s\n"
+                + "Direccion: %s\n"
+                + "Ciudad: %s\n"
+                + "Provincia: %s\n"
+                + "Numero de Especialidades: %d\n"
+                + "Listado de Medicos\n", 
+                nombre,
+                direccion,
+                ciudad.obtenerNombre(),
+                ciudad.obtenerProvincia(),
+                especialidades);
+        for (int i = 0; i < doctores.length; i++) {
+            cadena = String.format("%s- %s - sueldo: %.2f - %s\n",
+                    cadena, 
+                    doctores[i].obtenerNombre(),
+                    doctores[i].obtenerSueldo(),
+                    doctores[i].obtenerEspecialidad());
+        }
+        cadena = String.format("%sListado de Enfermeros\n", cadena);
+        for (int i = 0; i < enfermeros.length; i++) {
+            cadena = String.format("%s- %s - sueldo: %.2f - %s\n",
+                    cadena, 
+                    enfermeros[i].obtenerNombre(),
+                    enfermeros[i].obtenerSueldo(),
+                    enfermeros[i].obtenerTipo());
+        }   
         return cadena;
     }
+    
+   
 }
